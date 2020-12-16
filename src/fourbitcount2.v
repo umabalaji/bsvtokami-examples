@@ -55,8 +55,9 @@ End module'mkTb.
 Definition spec:=
   MODULE {
      Register "c" : Bit 4 <= Default
-     Read c_val : Bit 4 <- "c";
-    with Rule "increment2" :=
+     
+    with Rule "increment" :=
+       Read c_val : Bit 4 <- "c";
       Assert c_val <<== #15;
       LET c <- #c+$1;
       call unused : Void <- (Methodsig ("display") ((Bit 4)):Void) (#c_val);
