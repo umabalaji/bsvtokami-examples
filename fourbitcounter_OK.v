@@ -8,7 +8,7 @@ Theorem fourbitcounter_OK :=
    spec <<== mkTb
 
 Proof.
-Asserter.
+Asserted.
 
 Qed.
-End
+End fourbitcount2.
